@@ -1,0 +1,149 @@
+.login-wrapper {
+    margin: 25px;
+    display: flex;
+}
+.login-header{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-header a{
+	color: #2f5cff;
+}
+.login-header a:hover {
+    color: #1864a5;
+    text-decoration: underline;
+}
+.form {
+    display: block;
+    background: #fff;
+    padding: 25px;
+}
+.form .icon {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    padding: 13px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin: auto;
+}
+.form .icon img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.login-header h2 {
+    font-weight: 100;
+    padding: 17px 0px;
+}
+.login-panel{
+	width: 492px;
+}
+.form-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+}
+.form-action a {
+    color: #2f5cff;
+}
+.form-action a:hover {
+    color: #1864a5;
+    text-decoration: underline;
+}
+.form-action button {
+    padding: 11px 0px;
+    border: 1px solid #9bd09d;
+    background: #5dc161;
+    font-weight: bold;
+    color: #fff;
+    width: 112px;
+    height: 40px;
+    cursor: pointer;
+}
+.form-action label {
+    width: 260px;
+}
+.login-panel h4 {
+    padding: 5px 0px;
+    margin-top: 15px;
+    font-weight: 100;
+}
+.form-action button:hover {
+    background: #47944b;
+}
+.others-login {
+    background: #fff;
+    padding: 12px;
+    margin-top: 57px;
+    border-left: 1px solid #ddd;
+    width: 492px;
+}
+.others-login button {
+    width: 231px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.others-login h4 {
+    font-weight: 100;
+}
+.birthday_gender {
+    display: flex;
+    justify-content: space-between;
+    color: var(--font);
+}
+.birthday_gender select {
+    width: 103px;
+    padding: 8px 6px;
+    border: 1px solid #dad6d6;
+    outline: none;
+}
+.birthday_gender select option {
+    font-size: 15px
+}
+.regi_img {
+   display: flex;
+   justify-content: center;
+}
+.regi_img img{
+    height: 228px;
+    width: 228px;
+    object-fit: cover;
+}
+@media screen and (max-width: 576px){
+	.login-wrapper {
+	    min-width: 100%;
+	    margin: 5px;
+        display: block;
+	}
+	.login-panel {
+	    width: 100%;
+	}
+	.login-header {
+	    width: 100%;
+	    font-size: 17px;
+	    padding: 0 8px;
+	}
+	.birthday_gender {
+		display: block;
+	}
+	.birthday_gender select {
+	    width: 100%;
+	}
+	.birth-date{
+		display: flex;
+		justify-content: space-between;
+	}
+	.form-action label {
+	    font-size: 17px;
+	}
+    .others-login{
+        width: 100%;
+        margin-top: 5px;
+    }
+    .others-login button {
+        width: 49.3%;
+    }
+}

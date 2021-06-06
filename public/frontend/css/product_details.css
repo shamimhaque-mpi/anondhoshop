@@ -1,0 +1,77 @@
+.main-wrapper {
+	background: #fff;
+	min-height: 100vh;
+	padding: 10px;
+}
+.img-wrapper{
+	width: 345px;
+	height: 345px;
+}
+.img-wrapper > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.others-pic {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    margin-top: 11px;
+}
+.thumnil {
+    height: 80px;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    padding: 11px 7px;
+    width: 290px;
+}
+.thumnil::-webkit-scrollbar{
+	display: none;
+}
+.thumnil .img{
+	min-height: 58px;
+	min-width: 58px;
+	position: relative;
+}
+.thumnil .img + .img{
+	margin-left: 7px;
+}
+.thumnil .img img{
+	width: 100%;
+	height: 100%;		
+	border: 1px solid #ddd;
+	object-fit: cover;
+}
+.thumnil .img input[type='radio']{
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.thumnil .img input[type='radio']:checked ~ img {
+	border: 1px solid red;
+}
+.previous , .next {
+	position: relative;
+	width: 25px;
+	cursor: pointer;
+}
+.previous::before, .next::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 3px solid #ddd;
+    border-left: none;
+    border-bottom: none;
+}
+.previous::before {
+    transform: translate(-50%, -50%) rotate(-135deg);
+}

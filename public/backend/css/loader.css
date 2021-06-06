@@ -1,0 +1,78 @@
+*,*:befere,*:after{
+	padding: 0;
+	margin: 0;
+}
+
+/* start Loader css*/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:.5s;
+    opacity: 1;
+    z-index: 9999;
+}
+.loader > .loader-body {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	user-select: none;
+	position: relative;
+	box-sizing: border-box;
+}
+.loader > .app-name {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    background: #807d7d;
+    padding: 7px 20px;
+}
+.loader > .app-name > h3{
+    padding: 0;
+    margin: 0;
+}
+.loader > .loader-body > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	user-select: none;
+	box-sizing: border-box;
+    transition:all .5s;
+}
+.loader-body > span {
+    border: 3px solid #000;
+    border-left: 3px solid #03ffe8;
+    transition:.5s;
+    animation: loaderFramOne .6s infinite linear;
+}
+.loader_off {
+	display: none;
+}
+
+@keyframes loaderFramOne {
+	25%{
+		transform: rotate(90deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	75%{
+		transform: rotate(270deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+/* End loader css*/

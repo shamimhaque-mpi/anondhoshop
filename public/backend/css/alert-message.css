@@ -1,0 +1,78 @@
+.alert-message {
+    position: fixed;
+    top: 68px;
+    right: 15px;
+    width: 340px;
+    height: 70px;
+    border: 1px solid #7bb97d;
+    box-shadow: 4px 10px 7px -5px #c1c1c1;
+    user-select: none;
+    transition: all .5s linear;
+    opacity: 1;
+    z-index: 9999;
+}
+.alert-message > .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: 60px; 
+	text-align: center;
+	overflow: hidden;
+}
+.alert-message > .message > .time-label {
+    position: absolute;
+    right: 0px;
+    bottom: 4px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all .5s linear;
+    z-index: 9999;
+}
+.alert-message > .message > .time-label-aria {
+    position: absolute;
+    right: 0px;
+    bottom: 4px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #d0dcccf2;
+    z-index: 9998;
+}
+.alert-message > .message > h3 {
+    font-size: 17px;
+    font-family: initial;
+    margin: 0;
+    margin-top: 13px;
+    width: 100%;
+}
+
+/* task of success*/
+.alert-message.success {
+    background: #3be642e6;
+}
+.alert-message.success:hover {
+    background: #55ff5ce6;
+}
+.alert-message.success > .message > h3 {
+    color: #08750d;
+}
+.alert-message.success > .message > .time-label {
+    border: 2px solid #26ad2c;
+}
+
+/* task of success*/
+.alert-message.warning {
+    background: #fb7373;
+}
+.alert-message.warning:hover {
+    background: #ff9c9c;
+}
+.alert-message.warning > .message > h3 {
+    color: #80151f;
+}
+.alert-message.warning > .message > .time-label {
+    border: 2px solid red;
+}

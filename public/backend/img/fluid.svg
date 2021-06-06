@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 14400 14400" style="enable-background:new 0 0 14400 14400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{display:none;}
+	.st2{display:inline;fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st5{font-family:'Rockwell';}
+	.st6{font-size:1267px;}
+</style>
+<g id="Layer_3">
+	<rect x="-1000.5" y="-1029.5" class="st0" width="16380" height="16380"/>
+</g>
+<g id="Layer_1_copy" class="st1">
+	<rect x="-1047.05" y="-1044.26" class="st2" width="16516.55" height="16516.55"/>
+</g>
+<g id="Layer_1_copy_2">
+	<g>
+		<g>
+			<path d="M5019.5,8212c1.93,0,1.93-3,0-3C5017.57,8209,5017.57,8212,5019.5,8212L5019.5,8212z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path d="M5019.5,8212c1.93,0,1.93-3,0-3C5017.57,8209,5017.57,8212,5019.5,8212L5019.5,8212z"/>
+		</g>
+	</g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1979.5" y1="11410.5" x2="1979.5" y2="11410.5">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="0.0934" style="stop-color:#F9F9F9"/>
+		<stop  offset="0.2184" style="stop-color:#E8E8E8"/>
+		<stop  offset="0.3613" style="stop-color:#CCCCCC"/>
+		<stop  offset="0.5175" style="stop-color:#A5A5A5"/>
+		<stop  offset="0.6846" style="stop-color:#737373"/>
+		<stop  offset="0.8579" style="stop-color:#373737"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</linearGradient>
+	<path class="st3" d="M1979.5,11410.5"/>
+	<path class="st4" d="M13089.14,13024.14c-3084.26,0-8267.88,0-8267.88,0L3595.8,14400l-1254.41-1347.68
+		c0,0-809.04-28.19-958.53-28.19c-382.53,0-503.35-211.83-503.35-409.69c0-773.86,0-1547.72,0-2321.59
+		c0-237.43,120.82-468.72,476.97-468.72c3906.24,0,7812.47,0,11718.71,0c337.72,0,484.33,178.52,484.33,468.72
+		c0,756.65,0,1513.3,0,2269.95C13559.5,12785.93,13412.9,13024.14,13089.14,13024.14z"/>
+	<text transform="matrix(1 0 0 1 1888.0566 11763.5)" class="st5 st6">Select your Picture</text>
+</g>
+</svg>

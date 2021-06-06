@@ -1,0 +1,283 @@
+@import url('fonts.css');
+*, *::after, *::before {
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+h1,h2,h3,h4,h5,h6{
+	padding: 0;
+	margin: 0;
+	width: fit-content;
+}
+:root{
+    --success: #4CAF50;
+    --primary: #5e635e;
+    --secondary: #24748c;
+    --info: #98c218;
+    --warning: #dc8809;
+    --danger: #ff4f4f;
+}
+.link {
+	color: #9ed092;
+	text-decoration: none;
+
+}
+.login{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.login-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 368px;
+    height: 404px;
+    padding: 34px 15px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0px 13px 15px -11px #020202;
+    border: 1px solid #e7dede;
+    user-select: none;
+}
+.login-panel > .divition {
+    width: 90%;
+    border-bottom: 1px solid #cec8c8;
+    display: block;
+    margin: auto;
+    position: relative;
+    margin-top: 6px;
+}
+.login-panel > .divition::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #e7e3e3;
+    border-radius: 50%;
+}
+.login-panel > .divition::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border: 1px solid #d8d5d5;
+    border-radius: 50%;
+}
+.login-panel > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    padding: 10px;
+    color: #009587;
+    font-family: 'Fira Sans';
+}
+.login-panel > .form {
+    padding: 8px 18px;
+}
+.login-panel > .form > .form-group {
+    display: grid;
+    margin-top: 12px;
+    position: relative;
+    font-family: 'Fira Sans';
+    font-size: .9rem;
+}
+.login-panel > .form > .form-group:nth-child(2) {
+    margin-top: 17px;
+}
+.login-panel > .form > .form-group > label {
+    padding: 2px 0px;
+}
+.login-panel > .form > .form-group > input {
+    padding: 13px 12px 12px 11px;
+    outline: none;
+    margin-top: 2px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    color: #726262;
+    font-family: 'Fira Sans';
+    font-size: 0.9rem;
+}
+.login-panel > .form > .form-group > span {
+    position: absolute;
+    right: 11px;
+    bottom: -17px;
+    color: red;
+    display: none
+}
+.login-panel > .form > .unvalidated > input {
+    border: 1px solid #ff0000cf;
+}
+.login-panel > .form > .unvalidated > span {
+    display: block;
+}
+.login-panel > .form > .form-group > span[id='show'] {
+    display: block;
+}
+.login-panel > .form > .form-group > input[type='password'] {
+    padding: 13px 48px 12px 11px;
+}
+.login-panel > .form > .form-group > #show {
+    position: absolute;
+    bottom: 5px;
+    right: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 6px 10px;
+    color: #a9a9a9;
+    border-radius: 4px;
+    /*border: 1px solid;*/
+}
+.login-panel > .form > .submit > a {
+    line-height: 45px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #009587;
+    font-family: 'Fira Sans';
+}
+.login-panel > .form > .submit > a:hover {
+    color: #1b702b;
+    text-decoration: underline;
+}
+.login-panel > .form > .submit > button {
+    float: right;
+    padding: 6px 26px;
+    border-radius: 2px;
+    background: #009587;
+    border: 1px solid #89968c;
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.login-panel > .form > .submit > button:hover {
+    background: #797b8a;
+    border: 1px solid #2b5f37;
+    box-shadow: 4px 4px 3px 2px #ddd;
+}
+.login-panel > .form > .remember_me {
+    margin: 11px 3px 2px 0px;
+}
+.login-panel > .form > .remember_me > label {
+    display: inline-flex;
+}
+.login-panel > .form > .remember_me > label > span {
+    line-height: 13px;
+}
+.gride-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #009587;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    width: 100%;
+    height: 100vh;
+}
+.gride-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e6e6e6;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    width: 100%;
+    height: 100vh;
+}
+.site-name {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-size: 27px;
+    font-family: Cookie;
+    font-style: italic;
+    color: #009587;
+}
+
+
+/* start Loader css*/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #100d0dbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:.5s;
+    opacity: 1;
+    z-index: 9999;
+}
+.loader > .loader-body {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    user-select: none;
+    position: relative;
+    box-sizing: border-box;
+}
+.loader > .app-name {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    background: #807d7d;
+    padding: 7px 20px;
+}
+.loader > .app-name > h3{
+    padding: 0;
+    margin: 0;
+}
+.loader > .loader-body > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    user-select: none;
+    box-sizing: border-box;
+    transition:all .5s;
+}
+.loader-body > span {
+    border: 2px solid #000;
+    border-left: 2px solid #03ffe8;
+    transition:.5s;
+    animation: loaderFramOne .6s infinite linear;
+}
+.loader_off {
+    display: none;
+}
+
+@keyframes loaderFramOne {
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* End loader css*/

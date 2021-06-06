@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Panel</title>
+	<meta name="viewport" content="width = device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+  	<link href="../plugin/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  	<script src="../js/login.js" type="text/javascript"></script>
+</head>
+<body>
+	<section class="login">
+		<div class="gride-1"></div>
+		<div class="gride-2"></div>
+		<form action="#" method="POST">
+			<div class="login-panel">
+				<h2>Login</h2>
+				<span class="divition"></span>
+				<div class="form">
+					<div class="form-group unvalidated">
+						<label>User Name</label>
+						<input type="text" name="username" autocomplete="off">
+						<span id="v_username">This Field Can not be enty!</span>
+					</div>
+					<div class="form-group unvalidated">
+						<label>Password</label>
+						<input type="password" name="password" id="password">
+						<span id="v_password">This Field Can not be enty!</span>
+						<span id="show"><i class="fa fa-eye" aria-hidden="true"></i></span>
+					</div>
+					<div class="remember_me">
+						<label>
+							<input type="checkbox" name="remember_me" >&nbsp;
+							<span>Remember Me</span>
+						</label>
+					</div>
+					<div class="submit">
+						<a href="#">Forgot Password</a>
+						<!-- <input type="submit" value="Login" name="submit"> -->
+						<button><span><i class="fa fa-sign-in" aria-hidden="true"></i></span></button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+</body>
+</html>

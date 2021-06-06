@@ -1,0 +1,9 @@
+	<link href="{{ asset('public/backend/css/min.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/asidebar.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/plugin/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/dashboard.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/loader.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/alert.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/alert-message.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/select-option.css') }}" rel="stylesheet" >
+	<link href="{{ asset('public/backend/css/custom.css') }}" rel="stylesheet" >

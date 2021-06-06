@@ -1,0 +1,552 @@
+:root{
+	--site_bar_background: #293c5d;
+	--site_bar_forground: #182640;
+	--site_bar_border: #21304a;
+	--site_bar_default_font_color: #fff;
+	--site_bar_active_font_color: #96e6df;
+	--site_bar_active_menu_background: #252525;
+	--site_bar_box_border: #b5b5b5;
+	--site_bar_btn_border: #9a9a9a;
+	--site_bar_btn_bg_color: #6a7180;
+	--site_bar_btn_font_color: #d3e2e1;
+};
+
+.body_wrapper {
+	width: 100%;
+	height: 100vh;
+	background: #9e9e9e;
+	overflow: hidden;
+}
+.body_wrapper > .page_body {
+ 	width: calc(100% - 230px);
+ 	height: calc(100vh - 50px);
+ 	padding: 18px 18px 18px 18px;
+ 	overflow-y: auto;
+ 	float: right;
+ 	background: var(--site_background);
+ }
+.body_wrapper > .page_body::-webkit-scrollbar {
+	display: none;
+ }
+.body_wrapper > .header {
+	background: var(--site_bar_background);
+	display: flex;
+}
+.header > .sidebarheader {
+	width: 230px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	color: var(--site_bar_default_font_color);
+	font-size: 1.5rem;
+	font-family: 'Niconne', cursive;
+}
+.header > .sidebarheader > h1 {
+    padding-left: 10px;
+    font-size: 25px;
+    font-family: Cookie;
+    text-transform: capitalize;
+}
+/*toggle btn*/
+.sidebarheader > .tg_btn {
+	position: relative;
+	margin-right: 20px;
+	display: block;
+	height: 20px;
+	width: 30px;
+	cursor: pointer;
+}
+.ToggleButton {
+    position: absolute;
+    width: 35px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.ToggleButton span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #f8fbff;
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+    transition: all .3s;
+    opacity: 1;
+    overflow: hidden;
+}
+.ToggleButton span:nth-child(1) {
+	top: 0px;
+}
+.ToggleButton span:nth-child(2) {
+	top: 9px;
+	width: 28px;
+}
+.ToggleButton span:nth-child(3) {
+	bottom: 1px;
+	width: 31px
+}
+.ToggleButton.close span {
+	top: 50%;
+	left: 50%;
+	width: 38px
+}
+.ToggleButton.close span:nth-child(1) {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.ToggleButton.close span:nth-child(2) {
+	opacity: 0;
+}
+.ToggleButton.close span:nth-child(3) {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+/*end toggle btn*/
+.body_wrapper > .header > .task_bar {
+	width: calc(100% - 230px);
+	background: #fff;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+	box-shadow: 8px -8px 6px 8px #8a8a8a;
+	z-index: 1;
+}
+
+.header > .task_bar > .task_bar_menu {
+	height: 100%;
+	width: 60px;
+	margin-right: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.task_bar > .task_bar_menu > .notification-box{
+	position: relative;
+	cursor: pointer;
+}
+.task_bar > .task_bar_menu > .notification-box > .envelope{
+	width: 37px;
+    height: 37px;
+    margin: 8px;
+    box-sizing: border-box;
+    position: relative;
+}
+.notification-box > .envelope > span{
+	font-size: 29px;
+}
+.notification-box > .envelope > .smg_count{
+	position: absolute;
+    font-size: 11px;
+    background: var(--site_bar_background);
+    color: var(--site_bar_default_font_color);
+    padding: 4px;
+    border-radius: 50%;
+    left: 15px;
+    top: 2px;
+    font-weight: 600;
+}
+.notification-box > .notification{
+	position: absolute;
+    top: 56px;
+    right: -6px;
+    height: 0px;
+    width: 0px;
+    background: var(--site_bar_background);
+    border: 1px solid var(--site_bar_box_border);
+    transition: all 0.3s;
+    overflow: hidden;
+    opacity: 0;
+}
+.notification-box > .notification::before{
+	position: absolute;
+    content: '';
+    top: -9px;
+    right: 26px;
+    height: 17px;
+    width: 17px;
+    transform: rotate(45deg);
+    background: var(--site_bar_background);
+    border: 1px solid var(--site_bar_box_border);
+    border-bottom: 0;
+    border-right: 0;
+}
+.notification-box > .notification_open{
+    height: 128px;
+    width: 285px;
+    opacity: 1;
+    overflow: inherit;
+    opacity: 1;
+}
+.notification > .notification-innerBox{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.notification-innerBox > .ontification-mainBox{
+	height: 128px;
+    width: 285px;
+    padding: 15px;
+}
+.notification-innerBox > .ontification-mainBox > .message{
+	display: flex;
+	color: #fff;
+}
+.notification-innerBox > .ontification-mainBox > .message > span{
+	display: block;
+    width: 15px;
+    margin-right: 10px;
+    border-right: 1px solid var(--site_bar_box_border);
+}
+.notification-innerBox > .ontification-mainBox > .message > samp{
+	overflow: hidden;
+    width: 224px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.task_bar > .task_bar_menu:last-child {
+	margin-right: 20px;
+}
+.task_bar > .task_bar_menu > .profiles {
+	 position: relative;
+}
+.task_bar_menu > .profiles > .profiles_option {
+	position: absolute;
+	top: 148%;
+	right: -13px;
+	width: 0px;
+	height: 0px;
+	transition: all 0.3s;
+	opacity: 0;
+	border: 1px solid var(--site_bar_box_border);
+}
+.profiles > .profiles_option > .profiles_option_wrapper {
+	width: 100%;
+	height: 100%;
+	background: var(--site_bar_background);
+	overflow: hidden;
+}
+.profiles_option > .profiles_option_wrapper > .btn-group {
+	margin-top: 10px;
+    margin-right: 9px;
+}
+.profiles_option > .profiles_option_wrapper > .btn-group > .btn {
+	padding: 6px 15px;
+    margin-left: 4px;
+    background: var(--site_bar_btn_bg_color);
+    border: 1px solid var(--site_bar_btn_border);
+    color: var(--site_bar_btn_font_color);
+}
+.profiles_option > .profiles_option_wrapper > .user {
+	display: flex;
+    width: 100%;
+    height: 73px;
+    color: #fff;
+    overflow: hidden;
+}
+.profiles_option_wrapper > .user .img {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 7px 7px;
+    border: 1px solid #b7b1b1;
+    background: darkgray;
+}
+.profiles_option_wrapper > .user .img > img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profiles_option_wrapper > .user > .info{
+    width: 200px;
+    padding: 4px;
+    height: 100%;
+    font-family: Markazi Text;
+    font-size: 18px;
+    line-height: 20px;
+}
+.profiles_option_wrapper > .user > .info > h3{
+	width: 100%;
+    margin-top: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.profiles_option_wrapper > .user > .info > p{
+	position: relative;
+	font-size: 14px;
+	color: var(--site_bar_default_font_color);
+}
+.profiles_option_wrapper > .divider{
+    position: relative;
+	display: block;
+    width: 93%;
+    margin: auto;
+    border-bottom: 1px solid var(--site_bar_btn_border);
+}
+.task_bar_menu > .profiles > .profile_option_open {
+	width: 285px;
+    height: 128px;
+    opacity: 1;
+}
+.task_bar_menu > .profiles > .profiles_option::before {
+	content: '';
+	position: absolute;
+	top: -8px;
+	right: 19px;
+	width: 15px;
+	height: 15px;
+	background: var(--site_bar_background);
+	transform: rotate(45deg);
+	border-left: 1px solid var(--site_bar_box_border);
+	border-top: 1px solid var(--site_bar_box_border);
+}
+.task_bar_menu > .profiles > .profile_img {
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 1px solid var(--site_bar_border);
+	cursor: pointer;
+}
+.task_bar_menu > .profiles > .profile_img > img {
+	width: 30px;
+	height: 30px;
+	object-fit: cover;
+}
+.task_bar_menu > .localization {
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 1px solid #c5bfbf;
+}
+.task_bar_menu > .localization > a > img {
+	width: 30px;
+	height: 30px;
+	object-fit: cover;
+}
+.task_bar > .task_bar_menu > a > span {
+	font-size: 25px;
+}
+.sidemenu {
+	width: 230px;
+	height: calc(100vh - 50px);
+	background: var(--site_bar_background);
+	overflow-y: auto;
+	scrollbar-width: none;
+	float: left;
+}
+.sidemenu::before {
+	content: '';
+	opacity: 0;
+	transition: all 2s;
+}
+.sidemenu::-webkit-scrollbar {
+	width: 1px;
+}
+.sidemenu::-webkit-scrollbar-track {
+	background: #3f4d67;
+}
+.sidemenu::-webkit-scrollbar-thumb {
+	background: #e6e0e0;
+}
+/*.sidemenu > ul {
+	background: #3f4d67;
+}*/
+.sidemenu > ul > li {
+    border-bottom: 1px solid var(--site_bar_border);
+    font-size: .855rem;
+}
+.sidemenu > ul > li > a {
+	display: block;
+	position: relative;
+	color: var(--site_bar_default_font_color);
+	text-decoration: none;
+	padding: 15px;
+	user-select: none;
+	cursor: pointer;
+}
+.sidemenu > ul > li > a:hover {
+	background: rgba(0,0,0,0.2);
+}
+.sidemenu > ul > li > a > span {
+	margin-right: 7px;
+}
+.sidemenu > ul > li.active > a {
+	background: var(--site_bar_active_menu_background);
+	color: var(--site_bar_active_font_color);
+}
+.sidemenu > ul > li.active > a::before {
+	display: block;
+	position: absolute;
+	content: '';
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 2px;
+	background-color: var(--site_bar_active_font_color);
+}
+.sidemenu > ul > li > ul > li + li {
+	border-top: 1px solid var(--site_bar_border);
+}
+.sidemenu > ul > li > ul > li > a {
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	color: var(--site_bar_default_font_color);
+	padding: 15px;
+	background: var(--site_bar_forground);
+	padding-left: 40px;
+	user-select: none;
+	cursor: pointer;
+}
+.sidemenu > ul > li > ul > li > a:hover {
+	 background: #4941545e;
+}
+.sidemenu > ul > .dropdown.dev{
+	background: #7d1a56;
+}
+.sidemenu > ul > li > ul > li > a > span {
+	 margin-right: 7px;
+}
+ .sidemenu > ul > li > ul > li.active_child > a {
+	 color: var(--site_bar_active_font_color);
+}
+.sidemenu > ul > .dropdown > a {
+	position: relative;
+	display: block;
+}
+.sidemenu > ul > .dropdown > a::after {
+	content: '';
+	position: absolute;
+	top: 40%;
+	right: 10%;
+	display: block;
+	height: 9px;
+	width: 9px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	transition: 0.5s;
+	transform: rotate(-45deg);
+}
+.sidemenu > ul > .dropdown > ul {
+	overflow: hidden;
+	transform: 0.3s;
+	transition: 0.3s;
+	height: 0px;
+}
+.sidemenu > ul > .dropdown-open > a {
+	background: rgba(0,0,0,.2);
+}
+.sidemenu > ul > .dropdown-open > a::after {
+	transform: rotate(130deg);
+}
+.sidemenu > ul > .dropdown-open > ul {
+	transition: all 0.2s;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	
+}
+
+@media screen and (max-width: 992px) {
+	
+}
+
+@media screen and (max-width: 768px) {
+	.sidemenu {
+	 	position: fixed;
+	 	transition: all 0.3s;
+	 	z-index: 3;
+	 	left: -100%;
+	}
+	.sidemenu.sidebar-open{
+	 	left: 0%;
+	 }
+	.sidemenu.sidebar-open::before{
+	 	width: 100%;
+	 	height: 100%;
+	 	background: rgba(0,0,0,.2);
+	 	opacity: 1;
+ 	    z-index: -1;
+	    position: inherit;
+	 }
+	.sidemenu.sidebar-open > ul{
+		background: var(--site_bar_background);
+	 }
+	.body_wrapper > .page_body {
+	 	width: 100%;
+	 	padding: 5px 5px 5px 5px;
+	}
+	.body_wrapper > .header > .sidebarheader {
+	    width: 230px;
+	    box-sizing: border-box;
+	    border-bottom: 1px solid var(--site_bar_border);
+	    position: relative;
+	}
+	.body_wrapper > .header > .sidebarheader > h1 {
+	    display: block;
+	}
+	.body_wrapper > .header > .sidebarheader > .tg_btn {
+	    margin: 7px;
+	}
+	.body_wrapper > .header > .task_bar {
+	    width: calc(100% - 230px);
+	    box-shadow: 8px -8px 3px 8px #8a8a8a;
+	    z-index: 4;
+	}
+	.body_wrapper > .header > .task_bar > .task_bar_menu:last-child {
+	    margin-right: 4px;
+	}
+	.profiles > .profile_option_open {
+	    right: -14px;
+	}
+	.profiles > .profiles_option::before {
+	    right: 20px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.sidemenu {
+	 	position: fixed;
+	 	transition: all 0.3s linear;
+	 	z-index: 3;
+	 	left: -100%;
+	}
+	.body_wrapper > .page_body {
+	 	width: 100%;
+	 	padding: 5px 5px 5px 5px;
+	}
+	.body_wrapper > .header > .sidebarheader > h1 {
+	    display: none;
+	}
+	.body_wrapper > .header > .sidebarheader {
+	    width: 54px;
+	}
+	.sidebarheader > .tg_btn {
+	    margin: 7px;
+	}
+	.body_wrapper > .header > .task_bar {
+	    width: calc(100% - 54px);
+	    box-shadow: 8px -8px 3px 8px #8a8a8a;
+	}
+	.task_bar > .task_bar_menu:last-child {
+	    margin-right: 4px;
+	}
+	.profiles > .profile_option_open {
+	    right: -14px;
+	}
+	..profiles > .profiles_option::before {
+	    right: 20px;
+	}
+}
+
+
